@@ -1,8 +1,8 @@
-# New Astro project
+# Personal Astro site
 
-This repository contains the small Astro personal site.
+This is a small, static Astro site about a personal spiritual journey.
 
-The personal site is published from the `dev` branch at https://jathpr.github.io/.
+The site is published from the `dev` branch at https://jathpr.github.io/.
 
 ## Run it
 
