@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from "astro:content";
+import LocaleRedirect from "../../components/LocaleRedirect.astro";
+import { getJourney, nodeIdFor } from "../../lib/journey";
+
+// Keep legacy no-locale URLs working by sending each one to the browser's preferred locale.
+export async function getStaticPaths() {
+  const journey = await getJourney("be");
+  return journey
+    .filter((entry) => nodeIdFor(entry) !== "home")
+    .map((entry: CollectionEntry<"journey">) => ({
+      params: { slug: nodeIdFor(entry) },
+      props: { nodeId: nodeIdFor(entry) },
+    }));
+}
+
+const { nodeId } = Astro.props;
+---
+
+<LocaleRedirect nodeId={nodeId} />
