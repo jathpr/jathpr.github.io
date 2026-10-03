@@ -1,6 +1,8 @@
 # New Astro project
 
-This folder is a separate, small Astro project. The existing site in the repository root is kept as a reference and is not imported into this project.
+This repository contains the small Astro personal site.
+
+The personal site is published from the `dev` branch at https://jathpr.github.io/.
 
 ## Run it
 
