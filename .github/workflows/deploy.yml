@@ -39,6 +39,8 @@ jobs:
       - name: Build static site
         run: npm run build
         working-directory: site
+        env:
+          PUBLIC_R2_MEDIA_BASE_URL: ${{ vars.R2_PUBLIC_BASE_URL }}
       - name: Disable Jekyll processing
         run: touch site/dist/.nojekyll
       - name: Upload Pages artifact
